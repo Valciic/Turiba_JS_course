@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    height: 7vh;
+    min-height: 50px;
+    background-color: #1d0f28;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    
+}
+
+.logoImg {
+    width: 75px;
+    height: 35px;
+    justify-self: center;
+    transition: 0.2s;
+    border-radius: 5px;
+}
+
+.logoImg:hover {
+    cursor: crosshair;
+    transform: scale(1.1);
+}
+
+.logoImg:focus {
+    outline: none;
+    box-shadow: 2px 0 0 2px white;
+    transform: scale(1.1);
+}
+
+nav {
+    justify-self: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.linkBtn a{
+    color: white;
+}
+
+.linkBtn {
+    list-style-type: none;
+    display: inline;
+    padding: 0.4em 1em;
+    margin: 0 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2em;
+    transition: 0.3s;
+    border-radius: 20px;
+    letter-spacing: 2px;
+}
+
+.linkBtn:hover{
+    box-shadow: 0 0 0 4px #1d0f28,
+                0 0 0 8px white;
+    background-color: white;
+    color: #1d0f28;
+}
+
+
+.linkBtn:hover a {
+    color: #1d0f28;
+}
+
+.main-home {
+    display: grid;
+    /* gap: 35px; */
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 96vh;
+    width: 100vw;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                url("./Photos/hotel.jpg") top/cover no-repeat;
+}
+
+
+#welcome {
+    grid-column: 1 / span 4;
+    grid-row: 2;
+    font-size: 3rem;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
+    color: white;
+    font-family: 'Source Serif Pro', serif, Arial, Helvetica, sans-serif;
+    letter-spacing: 4px;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+}
+
+#intro-1, #intro-2 {
+    grid-row: 1;
+    color: 	white;
+    font-size: 1.3rem;
+    text-align: center;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
+    font-style: bold;
+    font-family: 'Source Serif Pro', serif, Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    
+}
+
+#intro-1 {
+    grid-column: 1 / span 2;
+    justify-self: center;
+    align-self: center;
+    margin-left: 75px;
+    
+}
+
+#intro-2 {
+    grid-column: 3 / span 2;
+    align-self: center;
+    justify-self: center;
+    margin-right: 75px;
+}
+
+.mainPageImg {
+    width: 230px;
+    height: 100px;
+    box-shadow: 0 0 0 3px #1d0f28,
+                0 0 0 7px white;
+    transition: 0.4s ease-in-out;
+    border-radius: 5px 5px 0 0;
+    justify-self: center;
+    align-self: center;
+}
+
+.mainPageImg:hover {
+    transform: scale(1.6);
+}
+
+#bathImg {
+    grid-column: 4;
+    grid-row: 3;
+}
+
+#lobyImg {
+    grid-column: 3;
+    grid-row: 3;
+    
+}
+
+#roomImg {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+#cafeImg {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+@media (max-width: 1000px) {
+    nav {
+        justify-self: left;
+    }
+
+    .linkBtn {
+        margin: 0;
+        font-size: 1em;
+    }
+
+    .linkBtn:hover{
+        font-size: 1.1em;
+        box-shadow: none;
+        background-color: unset;
+        }
+    .linkBtn:hover a {
+        color: white;
+    }
+
+    .main-home {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, 1fr);
+        gap: 15px;
+    }
+
+    #welcome, #intro-1, #intro-2, .mainPageImg {
+        grid-column: 1;
+        justify-self: center;
+        align-self: end;
+        margin: 0;
+    }
+
+    #welcome {
+        grid-row: 2;
+        font-size: 2rem;
+        align-self: end;
+    }
+
+    #intro-1, #intro-2 {
+        font-size: 1rem;
+    }
+    #intro-1 {
+        grid-row: 3;
+    }
+
+    #intro-2 {
+        align-self: start;
+        grid-row: 4;
+    }
+
+    #bathImg {
+        grid-column: 1;
+        grid-row: 5;
+    }
+
+    #lobyImg {
+        grid-column: 1;
+        grid-row: 6;
+    }
+
+    #roomImg {
+        grid-column: 1;
+        grid-row: 7;
+    }
+
+    #cafeImg {
+        grid-column: 1;
+        grid-row: 8;
+    }
+}
+
+@media (max-height: 715px) {
+    .mainPageImg {
+        display: none;
+    }
+
+    .main-home {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    #welcome, #intro-1, #intro-2 {
+        justify-self: center;
+        margin: 0;
+    }
+
+    #welcome {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    #intro-1 {
+        grid-column: 1;
+        grid-row: 3;
+        align-self: center;
+    }
+
+    #intro-2 {
+        grid-column: 1;
+        grid-row: 4;
+        align-self: start;
+    }
+
+    .footer {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 460px) {
+    .linkBtn {
+        padding: 0;
+    }
+}
+
+.footer {
+    display: flex;
+    width: 100vw;
+    background-color:rgba(29, 15, 40, 0.9);
+    height: 4vh;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 3px;
+}
+
+/* CSS for registration page */
+
+.main-register {
+    /* display: flex; */
+    justify-content: right;
+    width: 100vw;
+    height: 96vh;
+    background: linear-gradient(rgba(190, 156, 108, 0.5), rgba(190, 156, 108, 0.3)),
+    url("./Photos/reception.jpg") center/cover no-repeat;
+}
+
+@media (max-width: 540px) {
+    .register-form {
+        margin-left: 10%;
+        margin-right: 10%;
+        left: 25px;
+    }
+}
+.register-form{
+    position: absolute;
+    top: 20%;
+    right: 45px;
+    color: white;
+    margin-right: 200px;
+    min-width: 200px;
+}
+
+.form-group {
+    padding-bottom: 15px;
+}
+
+.form-label {
+    font-size: 20px;
+    display: block;
+    font-weight: 700;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: 2px 2px 2px black;
+    letter-spacing: 2px;
+}
+
+.register-form input[type="text"] {
+    padding: 4px;
+    width: 100%;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 1px;
+}
+
+.register-form input[type="text"]:focus {
+    background-color: rgba(189, 120, 151, 0.2);
+    color: white;
+    
+}
+
+.register-form input[type="text"]:focus::placeholder {
+    color: white;
+    font-size: 12px;
+}
+
+.register-form input[type="text"]:hover {
+    background-color: rgba(190, 156, 108, 0.5);
+    color: white; 
+    
+}
+.register-form input[type="text"]:hover::placeholder {
+    color: white;
+    font-size: 12px;       
+}
+
+.formBtn {
+    background-color: #1d0f28;
+    color: white;
+    position: relative;
+    left: 25%;
+    padding: 0.6em 0.8em;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: none;
+    transition: 0.3s;
+    border-radius: 10%;
+    box-shadow: 0px 4px rgba(255, 255, 255, 0.4);
+    transition: 0.2s ease-in-out;
+    letter-spacing: 2px;
+    margin-top: 5px;
+}
+.formBtn:hover {
+    background-color: rgba(60, 45, 22, 1);
+    transform: scale(1.1);
+}
+.formBtn:active {
+    box-shadow: 0 1px rgba(255, 255, 255, 0.2);
+    transform: translateY(3px);
+    outline: none;
+}
+
+.formBtn:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(190, 156, 108, 0.5),
+                0 0 0 7px #1d0f28;
+}
+
+#confirmation-message {
+    padding: 10px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    font-size: 16x;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* CSS for room list page */
+.main-room-list {
+    display: grid;
+    height: 96vh;
+    width: 100vw;
+    background: linear-gradient(rgba(190, 156, 108, 0.5), rgba(190, 156, 108, 0.3)),
+    url("./Photos/interior.jpg") center/cover no-repeat fixed;
+    grid-template-columns: 1fr;
+}
+
+#table {
+    grid-column: 1;
+    border-collapse: collapse;
+    justify-self: right;
+    align-self: center;
+    font-size: 18px;
+    max-width: 450px;
+    min-width: 200px;
+    margin-left: 45px;
+    margin-right: 145px;
+    background-color: rgba(190, 156, 108, 0.2);
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.6);
+}
+@media (max-width: 700px) {
+    #table {
+        margin-right: 45px;
+    }
+}
+
+#table thead tr {
+    background-color: #3c2d16;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+    font-family: 'Source Serif Pro', serif, Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 2px black;
+}
+
+
+
+#table th, #table td {
+    padding: 12px 15px;
+}
+
+#table td {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    letter-spacing: 2px;
+}
+
+#table tbody tr {
+    border-bottom: 1px solid #3c2d16;
+    transition: 0.2s;
+}
+
+#table tbody tr:nth-of-type(even) {
+    background-color:  rgba(190, 156, 108, 0.6);
+}
+
+#table tbody tr:nth-of-type(even):hover {
+    background-color:  rgba(176, 20, 23, 0.6);
+}
+
+#table tbody tr:nth-of-type(odd):hover {
+    background-color:  rgba(176, 20, 23, 0.6);
+}
+
+#table tbody tr:last-of-type {
+    border-bottom: 3px solid #3c2d16;
+}
+#table tbody .room-number {
+    font-weight: bold;
+}
+

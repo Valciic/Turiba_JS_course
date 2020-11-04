@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room statuss "Grand Budapest hotel"</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body >
+    <header class="header">
+        <a href="homePage.html" class="logoImg"><img src="./Photos/logo-removebg-preview.png" class="logoImg"></a>
+        <nav>
+            <ul class="navigation">
+                <li class="linkBtn"> <a href="homePage.html">HOME</a> </li>
+                <li class="linkBtn"> <a href="registration.html">REGISTRATION</a></li>
+                <li class="linkBtn"> <a href="roomList.html">ROOMS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-room-list">
+        <table id="table" ">
+            <thead>
+                <tr>
+                    <th>Room number</th>
+                    <th>Status</th>
+                    <th>Guests name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="room-number">1</td>
+                    <td class="room-status">Taken</td>
+                    <td>Monsieur Gustave H.</td>
+                </tr>
+                <tr>
+                    <td class="room-number">2</td>
+                    <td class="room-status">Reserved</td>
+                    <td>Madame D.</td>
+                </tr>
+                <tr>
+                    <td class="room-number">3</td>
+                    <td class="room-status">Reserved</td>
+                    <td>Agatha</td>
+                </tr>
+                <tr>
+                    <td class="room-number">4</td>
+                    <td class="room-status">Taken</td>
+                    <td>Zero Moustafa</td>
+                </tr>
+                <tr>
+                    <td class="room-number">5</td>
+                    <td class="room-status">Reserved</td>
+                    <td>Monsieur Albert Henckels</td>
+                </tr>
+                <tr>
+                    <td class="room-number">6</td>
+                    <td class="room-status"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="room-number">7</td>
+                    <td class="room-status">Free</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="room-number">8</td>
+                    <td class="room-status">Free</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer class="footer">
+        <p class="footer-text">&copy; Valciic, 2020</p>
+    </footer>
+
+    <script src="main.js" onload="checkStatus()"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration "Grand Budapest hotel"</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <a href="homePage.html" class="logoImg"><img src="./Photos/logo-removebg-preview.png" class="logoImg"></a>
+        <nav>
+            <ul class="navigation">
+                <li class="linkBtn"> <a href="homePage.html">HOME</a> </li>
+                <li class="linkBtn"> <a href="registration.html">REGISTRATION</a></li>
+                <li class="linkBtn"> <a href="roomList.html">ROOMS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-register">
+        <form class="register-form">
+            <div class="form-group">
+                <label for="firstName" class="form-label">First name</label>
+                <input type="text" name="firstName" placeholder="Enter first name" class="input-field" id="input-firstName">
+            </div>
+            <div class="form-group">
+                <label for="lastName" class="form-label">Last name</label>
+                <input type="text" name="lastName" placeholder="Enter last name" class="input-field" id="input-lastName">
+            </div>
+            <div class="form-group">
+                <label for="personalId" class="form-label">Personal ID</label>
+                <input type="text" name="personalId" placeholder="Enter personal ID" class="input-field" id="input-personalId">
+            </div>
+            <div id="confirmation-message" class="form-group">
+            </div>
+            <button class="formBtn" type="submit">Register</button>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <p class="footer-text">&copy; Valciic, 2020</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
